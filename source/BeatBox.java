@@ -56,22 +56,16 @@ public class BeatBox {
     buttonBox.add(startStop);
 
     Box tempoBox = new Box(BoxLayout.X_AXIS);
-    ImageIcon leftAngle = new ImageIcon("left.png");
-    ImageIcon rightAngle = new ImageIcon("right.png");
-    ImageIcon metronome = new ImageIcon("metronome.png");
 
-    JButton downTempo = new JButton("");
-    downTempo.setIcon(leftAngle);
+    JButton downTempo = new JButton("<");
     downTempo.addActionListener(new MyDownTempoListener());
     tempoBox.add(downTempo);
 
-    JButton metronomeBtn = new JButton("");
-    metronomeBtn.setIcon(metronome);
+    JButton metronomeBtn = new JButton("reset tempo");
     metronomeBtn.addActionListener(new MyResetTempoListener());
     tempoBox.add(metronomeBtn);
     
-    JButton upTempo = new JButton("");
-    upTempo.setIcon(rightAngle);
+    JButton upTempo = new JButton(">");
     upTempo.addActionListener(new MyUpTempoListener());
     tempoBox.add(upTempo);
 
